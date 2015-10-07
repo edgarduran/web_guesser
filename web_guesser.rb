@@ -11,15 +11,15 @@ end
 
 def evaluate_guess(guess)
   if    guess >= NUMBER + 5
-        evaluation = "way too high!!"
+        evaluation = "Your guess of #{guess} is way too high!!"
   elsif guess <= NUMBER - 5
-        evaluation = "way too low!!"
+        evaluation = "Your guess of #{guess} is way too low!!"
   elsif guess > NUMBER
-        evaluation = "too high!"
+        evaluation = "Your guess of #{guess} is too high!"
   elsif guess < NUMBER
-        evaluation = "too low!"
-  else
-        evaluation ="Correct!"
+        evaluation = "Your guess of #{guess} is too low!"
+  else  guess == NUMBER
+        evaluation ="The SECRET Number is #{NUMBER}.Your guess is Correct!!!"
   end
         evaluation
 end
