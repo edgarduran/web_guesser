@@ -10,11 +10,16 @@ get '/' do
 end
 
 def evaluate_guess(guess)
-  if guess > NUMBER
-    evaluation = "Too High!"
+  if    guess >= NUMBER + 5
+        evaluation = "way too high!!"
+  elsif guess <= NUMBER - 5
+        evaluation = "way too low!!"
+  elsif guess > NUMBER
+        evaluation = "too high!"
   elsif guess < NUMBER
-    evaluation = "Too Low!"
+        evaluation = "too low!"
   else
-    evaluation ="You got it!"
+        evaluation ="Correct!"
   end
+        evaluation
 end
